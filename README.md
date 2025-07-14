@@ -33,42 +33,42 @@ C'est l'outil parfait pour créer rapidement une "base de données" lisible de n
 Voici ce que `ctee.py` produit. C'est clair, coloré et incroyablement utile.
 
 ```
-Arborescence de : mon-projet/
-├── 📁 css
-│   ├── 📄 style.css
-│   │   └── body {
-│   │           font-family: 'Arial', sans-serif;
-│   │           color: #333;
-│   │       }
-│   └── 📄 responsive.css
-│       └── @media (max-width: 768px) {
-│               header h1 {
-│                   font-size: 1.8rem;
-│               }
-│           }
-├── 📁 documentation
-│   └── 📄 README.md
-│       └── # Mon Projet
-│           Ceci est un projet de démonstration...
-├── 📁 images
-│   ├── 📦 logo.png (binaire)
-│   └── 📦 background.jpg (binaire)
-├── 📁 js
-│   ├── 📄 main.js
-│   │   └── document.addEventListener('DOMContentLoaded', function() {
-│   │           console.log('Application chargée !');
-│   │       });
-│   └── 📄 utils.js
-│       └── function add(a, b) {
-│               return a + b;
-│           }
-└── 📄 index.html
+    Arborescence de : mon-projet/
+    ├── 📁 css
+    │ ├── 📄 style.css
+    │ │ └── body {
+    │ │ font-family: 'Arial', sans-serif;
+    │ │ color: #333;
+    │ │ }
+    │ └── 📄 responsive.css
+    │ └── @media (max-width: 768px) {
+    │ header h1 {
+    │ font-size: 1.8rem;
+    │ }
+    │ }
+    ├── 📁 documentation
+    │ └── 📄 README.md
+    │ └── # Mon Projet
+    │ Ceci est un projet de démonstration...
+    ├── 📁 images
+    │ ├── 📦 logo.png (binaire)
+    │ └── 📦 background.jpg (binaire)
+    ├── 📁 js
+    │ ├── 📄 main.js
+    │ │ └── document.addEventListener('DOMContentLoaded', function() {
+    │ │ console.log('Application chargée !');
+    │ │ });
+    │ └── 📄 utils.js
+    │ └── function add(a, b) {
+    │ return a + b;
+    │ }
+    └── 📄 index.html
     └── <!DOCTYPE html>
-        <html lang="fr">
-        <head>
-            <title>Mon Projet</title>
-        </head>
-        </html>
+    <html lang="fr">
+    <head>
+    <title>Mon Projet</title>
+    </head>
+    </html>
 ```
 
 ---
