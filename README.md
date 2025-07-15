@@ -1,4 +1,4 @@
-# Stree
+# stree
 
 ```markdown
 # 🦅 CTEE (Content Tree)
