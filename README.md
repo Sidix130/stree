@@ -1,13 +1,5 @@
 # Stree.py
 
-Absolument. Voici une proposition pour le fichier `README.md`.
-
-Il est conçu pour être "cool mais pro" : il commence de manière directe et attrayante, il explique clairement la valeur, il montre des exemples concrets, et il termine avec des instructions claires et une structure professionnelle.
-
----
-
-### Le Fichier `README.md`
-
 ```markdown
 # 🦅 CTEE (Content Tree)
 
@@ -137,4 +129,3 @@ Ce dépôt est né d'une exploration : jusqu'où peut-on pousser un script `bash
 *   **`ctee.py`** représente l'approche pragmatique, qui tire parti d'un écosystème riche pour offrir une expérience utilisateur supérieure.
 
 N'hésitez pas à explorer les deux, à les améliorer et à choisir celui qui correspond le mieux à votre workflow.
-```
