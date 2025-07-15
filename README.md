@@ -1,4 +1,4 @@
-# Stree.py
+# Stree
 
 ```markdown
 # 🦅 CTEE (Content Tree)
