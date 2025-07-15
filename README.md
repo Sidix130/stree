@@ -128,4 +128,4 @@ Ce dépôt est né d'une exploration : jusqu'où peut-on pousser un script `bash
 *   **`ctee.sh`** représente l'approche puriste, un témoignage de la puissance brute du shell.
 *   **`ctee.py`** représente l'approche pragmatique, qui tire parti d'un écosystème riche pour offrir une expérience utilisateur supérieure.
 
-N'hésitez pas à explorer les deux, à les améliorer et à choisir celui qui correspond le mieux à votre workflow.
+N'hésitez pas à explorer les deux, à les améliorer et choisir celui qui correspond le mieux à votre workflow.
