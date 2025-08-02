@@ -1,131 +1,127 @@
-# stree
-
-```markdown
 # 🦅 CTEE (Content Tree)
 
-Un `tree` qui ne vous laisse pas tomber. `ctee` est un outil en ligne de commande qui affiche l'arborescence d'un répertoire, mais qui va plus loin en affichant également le contenu des fichiers texte, avec une coloration syntaxique.
+Un outil `tree` amélioré. `ctee` est une commande qui affiche l'arborescence d'un répertoire et le contenu des fichiers texte, avec coloration syntaxique.
 
-C'est l'outil parfait pour créer rapidement une "base de données" lisible de n'importe quel projet de code, que ce soit pour documenter, partager ou simplement analyser une architecture.
-
----
-
-## ✨ Caractéristiques Principales
-
-*   **Arborescence Visuelle :** Affiche une structure de répertoires claire et hiérarchique.
-*   **Aperçu du Contenu :** Déplie le contenu des fichiers texte directement dans l'arbre.
-*   **Coloration Syntaxique :** Utilise la puissance de la bibliothèque `rich` pour une lisibilité maximale (Python).
-*   **Détection Intelligente :** Ignore automatiquement les fichiers binaires, les images, et les dossiers non pertinents comme `.git` ou `node_modules`.
-*   **Sortie Flexible :** Affichez le résultat dans votre terminal ou exportez-le en fichiers `.txt` et `.html` propres.
-*   **Deux Versions, Deux Philosophies :** Disponible en version **Python** (recommandée) pour la puissance et en version **Bash** pour la portabilité maximale.
+Parfait pour créer une documentation lisible de n'importe quel projet de code : explorer, partager ou analyser une architecture.
 
 ---
 
-## 🚀 Output Exemple (Version Python)
+## ✨ Caractéristiques
 
-Voici ce que `ctee.py` produit. C'est clair, coloré et incroyablement utile.
+* **Arborescence visuelle**  : structure claire et hiérarchique.
+* **Aperçu de contenu**    : déplie les fichiers texte directement dans l'arbre.
+* **Coloration syntaxique**: via la bibliothèque Python `rich`.
+* **Filtrage intelligent** : ignore les binaires, images et dossiers comme `.git` ou `node_modules`.
+* **Sortie flexible**       : affichage dans le terminal ou export en `.txt` / `.html`.
+* **Deux versions**         : Python (recommandée) et Bash (portabilité maximale).
 
-```
-    Arborescence de : mon-projet/
-    ├── 📁 css
-    │ ├── 📄 style.css
-    │ │ └── body {
-    │ │ font-family: 'Arial', sans-serif;
-    │ │ color: #333;
-    │ │ }
-    │ └── 📄 responsive.css
-    │ └── @media (max-width: 768px) {
-    │ header h1 {
-    │ font-size: 1.8rem;
-    │ }
-    │ }
-    ├── 📁 documentation
-    │ └── 📄 README.md
-    │ └── # Mon Projet
-    │ Ceci est un projet de démonstration...
-    ├── 📁 images
-    │ ├── 📦 logo.png (binaire)
-    │ └── 📦 background.jpg (binaire)
-    ├── 📁 js
-    │ ├── 📄 main.js
-    │ │ └── document.addEventListener('DOMContentLoaded', function() {
-    │ │ console.log('Application chargée !');
-    │ │ });
-    │ └── 📄 utils.js
-    │ └── function add(a, b) {
-    │ return a + b;
-    │ }
-    └── 📄 index.html
+---
+
+## 🚀 Exemple de sortie (Python)
+
+```plaintext
+Arborescence de : mon-projet/
+├── 📁 css
+│   ├── 📄 style.css
+│   │   └── body {
+│       font-family: 'Arial', sans-serif;
+│       color: #333;
+│   }
+│   └── 📄 responsive.css
+│       └── @media (max-width: 768px) {
+│           header h1 {
+│           font-size: 1.8rem;
+│           }
+│       }
+├── 📁 documentation
+│   └── 📄 README.md
+│       └── # Mon Projet
+│           Ceci est un projet de démonstration...
+├── 📁 images
+│   ├── 📦 logo.png (binaire)
+│   └── 📦 background.jpg (binaire)
+├── 📁 js
+│   ├── 📄 main.js
+│   │   └── document.addEventListener('DOMContentLoaded', function() {
+│           console.log('Application chargée !');
+│       });
+│   └── 📄 utils.js
+│       └── function add(a, b) {
+│           return a + b;
+│       }
+└── 📄 index.html
     └── <!DOCTYPE html>
-    <html lang="fr">
-    <head>
-    <title>Mon Projet</title>
-    </head>
-    </html>
+        <html lang="fr">
+        <head>
+        <title>Mon Projet</title>
+        </head>
+        </html>
 ```
 
 ---
 
-## 🛠️ Installation et Utilisation
+## 🛠️ Installation & utilisation
 
-Ce projet propose deux implémentations. La version Python est recommandée pour un usage quotidien.
+### Version Python (recommandée)
 
-### Version Python (Recommandée)
+**Pré-requis** : Python 3 et `pip`.
 
-**Pré-requis :**
-Vous devez avoir Python 3 et `pip` installés.
+1. Installer `rich` :
 
-1.  **Installez la dépendance `rich` :**
-    ```bash
-    pip install rich
-    ```
+   ```bash
+   pip install rich
+   ```
+2. Rendre le script exécutable et l’installer :
 
-2.  **Rendez le script exécutable et placez-le dans votre PATH :**
-    ```bash
-    chmod +x ctee.py
-    sudo mv ctee.py /usr/local/bin/ctee
-    ```
+   ```bash
+   chmod +x ctee.py
+   sudo mv ctee.py /usr/local/bin/ctee
+   ```
 
-**Utilisation :**
+**Exemples** :
+
 ```bash
-# Affiche l'arbre du répertoire courant
+# Afficher l'arbre du répertoire courant
 ctee
 
-# Affiche l'arbre d'un répertoire spécifique
-ctee /chemin/vers/votre/projet
+# Arbre d'un projet spécifique
+ctee /chemin/vers/projet
 
-# Limite la profondeur de l'affichage à 2 niveaux
+# Limiter la profondeur à 2 niveaux
 ctee -L 2
 
-# Sauvegarde la sortie dans des fichiers snapshot.txt et snapshot.html
+# Exporter en snapshot.txt et snapshot.html
 ctee -o snapshot
 ```
 
-### Version Bash (Pour la portabilité)
+### Version Bash (portabilité)
 
-Cette version ne nécessite aucune dépendance autre que les outils standards de tout système Linux (`file`, `find`, `sed`).
+**Pré-requis** : `file`, `find`, `sed` (outils standard Linux).
 
-1.  **Rendez le script exécutable et placez-le dans votre PATH :**
-    ```bash
-    chmod +x ctee.sh
-    sudo mv ctee.sh /usr/local/bin/ctee.sh
-    ```
+1. Rendre le script exécutable et l’installer :
 
-**Utilisation :**
+   ```bash
+   chmod +x ctee.sh
+   sudo mv ctee.sh /usr/local/bin/ctee.sh
+   ```
+
+**Exemples** :
+
 ```bash
-# Affiche l'arbre du répertoire courant
+# Afficher l'arbre
 ctee.sh
 
-# Sauvegarde la sortie dans un fichier
+# Sauvegarder la sortie
 ctee.sh > snapshot.txt
 ```
 
 ---
 
-##  philosophie du Projet
+## 🧭 Philosophie du projet
 
-Ce dépôt est né d'une exploration : jusqu'où peut-on pousser un script `bash` pour une tâche de parsing complexe, et à quel moment un langage de plus haut niveau comme Python devient-il non seulement plus pratique, mais nécessaire ?
+Ce dépôt explore jusqu'où un simple script Bash peut aller pour un parsing complexe, et quand Python devient nécessaire pour une meilleure expérience.
 
-*   **`ctee.sh`** représente l'approche puriste, un témoignage de la puissance brute du shell.
-*   **`ctee.py`** représente l'approche pragmatique, qui tire parti d'un écosystème riche pour offrir une expérience utilisateur supérieure.
+* **ctee.sh** : approche puriste, puissance du shell.
+* **ctee.py** : approche pragmatique, écosystème riche.
 
-N'hésitez pas à explorer les deux, à les améliorer et choisir celui qui correspond le mieux à votre workflow.
+Découvrez, améliorez et choisissez la version adaptée à votre workflow !
